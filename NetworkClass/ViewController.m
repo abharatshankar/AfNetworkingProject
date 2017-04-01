@@ -42,6 +42,9 @@
         if (error) {
             NSLog(@"Error: %@", error);
         } else {
+            
+            
+            
             NSLog(@"%@ %@", response, responseObject);
             articlesArray =[responseObject valueForKey:@"articles"];
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -86,6 +89,9 @@
     NSDictionary *data = [articlesArray objectAtIndex:indexPath.row];
     
     cellView.textLabel.text = [data valueForKey:@"title"];
+    
+    
+    
     
     return cellView;
     
